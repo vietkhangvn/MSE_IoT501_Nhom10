@@ -1,2 +1,5 @@
 # MSE_IoT501_Nhom10
-Project nhom 10 lớp MSE11
+Project nhóm 10 lớp MSE11
+- Nguyễn Viết Khang
+- Hồ Văn Chương
+- Hồ Thị Bích Thủy
