@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyIoTApp_Java</string>
+    <string name="clientId">nhom10mse</string>
+    <string name="username">vietkhang</string>
+    <string name="password">aio_AtzL41hG0fGckbmqfNf5cKfS4crj</string>
+    <string name="serverUri">tcp://io.adafruit.com:1883</string>
 </resources>

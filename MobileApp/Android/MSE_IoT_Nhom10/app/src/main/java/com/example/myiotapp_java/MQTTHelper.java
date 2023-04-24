@@ -1,5 +1,6 @@
 package com.example.myiotapp_java;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
 
@@ -14,19 +15,25 @@ import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import info.mqtt.android.service.MqttAndroidClient;
+import android.content.SharedPreferences;
 
 public class MQTTHelper {
     public MqttAndroidClient mqttAndroidClient;
 
-    public final String[] arrayTopics = {"vietkhang/feeds/cambien1", "vietkhang/feeds/cambien2"};
+    public final String[] arrayTopics = {
+            "vietkhang/feeds/cambien1",
+            "vietkhang/feeds/cambien2",
+            "vietkhang/feeds/nutnhan1",
+            "vietkhang/feeds/nutnhan2"};
+    public String clientId, username, password, serverUri;
 
-    final String clientId = "nhom10mse";
-    final String username = "vietkhang";
-    final String password = "aio_MfEK46KXd55hBgQaXvdJVkzlLMJL";
-
-    final String serverUri = "tcp://io.adafruit.com:1883";
-
+    //public MQTTHelper(Context context, String serverUri, String clientId, String username, String password){
     public MQTTHelper(Context context){
+        MQTTConfig MqttConfig = new MQTTConfig();
+        this.serverUri = MqttConfig.serverUri;
+        this.clientId = MqttConfig.clientId;
+        this.username = MqttConfig.username;
+        this.password = MqttConfig.password;
         mqttAndroidClient = new MqttAndroidClient(context, serverUri, clientId);
         mqttAndroidClient.setCallback(new MqttCallbackExtended() {
             @Override
@@ -48,6 +55,11 @@ public class MQTTHelper {
             public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
 
             }
+
+//            @Override
+//            public void publishToTopic (String topic, MqttMessage mqttMessage) throws Exception {
+//
+//            }
         });
         connect();
     }
@@ -105,6 +117,20 @@ public class MQTTHelper {
             });
 
         }
+    }
+
+    public void publishToTopic (String topic, MqttMessage message){
+        mqttAndroidClient.publish(topic, message.getPayload(), 0, false, null, new IMqttActionListener() {
+            @Override
+            public void onSuccess(IMqttToken asyncActionToken) {
+                Log.d("PUB", "Published successfully!");
+            }
+
+            @Override
+            public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
+                Log.d("PUB", "Published fail!");
+            }
+        });
     }
 
 }

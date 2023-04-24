@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clientId1">nhom10mse</string>
+    <string name="username1">vietkhang</string>
+    <string name="password1">aio_AtzL41hG0fGckbmqfNf5cKfS4crj</string>
+    <string name="serverUri1">tcp://io.adafruit.com:1883</string>
+</resources>

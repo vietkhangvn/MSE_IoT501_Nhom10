@@ -1,5 +1,7 @@
 import serial.tools.list_ports
 
+import FaceRecognition
+
 
 def getPort():
     ports = serial.tools.list_ports.comports()
@@ -25,9 +27,13 @@ def processData(client, data):
     splitData = data.split(":")
     print(splitData)
     if splitData[1] == "T":
-        client.publish("yolo", splitData[2])
+        client.publish("cambien1", splitData[2])
     elif splitData[1] == "H":
-        client.publish("yoloh", splitData[2])
+        client.publish("cambien2", splitData[2])
+    elif splitData[1] == "N":
+        fr = FaceRecognition
+
+
 
 
 mess = ""
@@ -49,5 +55,5 @@ def readSerial(client):
 
 
 def writeData(data):
-    print("Writing data: ", data)
+    print("Writing data to Serial: ", data)
     ser.write(str(data).encode())

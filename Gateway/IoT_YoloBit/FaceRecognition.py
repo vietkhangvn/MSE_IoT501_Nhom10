@@ -6,8 +6,8 @@ import cv2
 import numpy as np
 import math
 
-array_names = ['KhongTen', 'baotrong', 'nguyenlananh', 'phuongnguyen']
-array_names_vn = ['Chưa biết tên', 'Bảo Trọng', 'Lan Anh', 'Nguyễn Phượng']
+array_names = ['KhongTen', 'NguyenVietKhang']
+array_names_vn = ['Chưa biết tên', 'Nguyễn Viết Khang']
 MAX_COUNTER_REPEAT = 10
 
 
@@ -57,7 +57,6 @@ class FaceRecognition:
         counter_test = 0
         while True:
             ret, frame = video_capture.read()
-
             # Only process every other frame of video to save time
             if self.process_current_frame:
                 # Resize frame of video to 1/4 size for faster face recognition processing
@@ -95,7 +94,7 @@ class FaceRecognition:
                 match_index = -1
                 for i in range(0, N):
                     if name.lower().find(array_names[i].lower()) >= 0:
-                        print("Detection 1:", array_names[i], name)
+                        print("Detection:", array_names[i], name)
                         name = array_names_vn[i]
                         match_index = i
                         break
@@ -138,6 +137,7 @@ class FaceRecognition:
             # Release handle to the webcam
         video_capture.release()
         cv2.destroyAllWindows()
+        #return name;
 
 
 fr = FaceRecognition()
