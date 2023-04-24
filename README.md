@@ -10,8 +10,8 @@ Mục tiêu nhóm 10 xây dựng một ứng dụng theo dõi dành cho công ty
 
 ## Ứng dụng Android để theo dõi trực tiếp các thông tin cần thiết:
 - Cho phép người dùng chủ động kết nối đến Server, thông báo tình trạng kết nối và message cuối cùng nhận được là khi nào:
-![image](https://user-images.githubusercontent.com/90981819/234106382-d7c22fe9-7b4b-49c7-8681-557428c43b29.png)
-![image](https://user-images.githubusercontent.com/90981819/234107012-f97acfbd-d0dc-4f0c-a537-812942976010.png)
+  <img src="https://user-images.githubusercontent.com/90981819/234106382-d7c22fe9-7b4b-49c7-8681-557428c43b29.png" width="250"/>
+  <img src="https://user-images.githubusercontent.com/90981819/234107012-f97acfbd-d0dc-4f0c-a537-812942976010.png" width="250"/>
 
 - Theo dõi Nhiệt độ và Độ ẩm phòng (cập nhật sau mỗi 5s). 
 - Cảnh báo trên điện thoại khi nhiệt độ quá cao hoặc quá thấp. Nếu nhiệt độ vượt quá 35 độ hoặc độ ẩm vượt quá 70% sẽ xuất hiện cảnh báo trên màn hình (màu đỏ).
@@ -20,7 +20,7 @@ Mục tiêu nhóm 10 xây dựng một ứng dụng theo dõi dành cho công ty
 ![image](https://user-images.githubusercontent.com/90981819/234107856-a7a8fbfa-5258-495b-a241-6af029936769.png)
 
 - Tự động bật quạt khi nhiệt độ quá cao: Cấu hình bằng Action trên Adafruit: khi nhiệt độ từ cambien1 lớn hơn 35 thì gửi 1 tín hiệu đến cambien2 (điều khiển quạt) để bật quạt:
-![image](https://user-images.githubusercontent.com/90981819/234108658-58f4d251-59b1-4857-91e0-54df45b93dd7.png =120x120)
+![image](https://user-images.githubusercontent.com/90981819/234108658-58f4d251-59b1-4857-91e0-54df45b93dd7.png)
 ![image](https://user-images.githubusercontent.com/90981819/234108796-d449810f-670e-4a0b-9636-3f6c3817be1a.png)
 
 - Cho phép người dùng chủ động bật quạt trên điện thoại, Cho phép chủ động bật tắt đèn trên ứng dụng điện thoại (đồng bộ với trạng thái trên Adafruit.io):
@@ -33,7 +33,9 @@ https://user-images.githubusercontent.com/90981819/234116107-eba03a41-627d-4215-
 ![image](https://user-images.githubusercontent.com/90981819/234117502-11dc0411-a351-415e-9fc6-2d796263d975.png)
 
 
-- Thông báo khi có người lạ vào.
+- Cảnh báo bằng đèn màu vàng khi phát hiện có người xâm nhập:
+- ![image](https://user-images.githubusercontent.com/90981819/234120086-f8fec166-b6b8-4fee-9d25-1e546f79f603.png)
+
 - Thông báo nếu có nhân viên cty không mang khẩu trang.
 - Tính năng nâng cao: lưu cấu hình MQTT server vào SharedPreferences để tăng tính bảo mật và tăng tính đóng gói của chương trình.
 
