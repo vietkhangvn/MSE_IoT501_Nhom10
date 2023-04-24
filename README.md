@@ -29,3 +29,6 @@ Mục tiêu nhóm 10 xây dựng một ứng dụng theo dõi dành cho công ty
     - Nếu nhận diện được gương mặt đã khai báo trước (VD: gương mặt nhân viên cty), sẽ tự động phát lời chào: "Xin chào" + tên nhân viên. Đồng thời sáng đèn màu xanh.
     - Nếu phát hiện người lạ: đèn chuyển sang màu đỏ, đồng thời phát thông báo: **"Xin chào quý khách"**.
 - Phát hiện gương mặt đeo khẩu trang: kích hoạt mở cửa, cửa sẽ không mở khi phát hiện gương mặt không đeo khẩu trang.
+- Tính năng nâng cao:
+    - Lưu cấu hình các thư viện cần thiết trong requirements.txt -> không phải cài đặt thư viện thủ công.
+    - Lưu Adafruit API Key trong file Configuration riêng biệt để bảo mật, tránh bị lộ key khi commit code lên Github.
