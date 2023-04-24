@@ -16,6 +16,7 @@ Mục tiêu nhóm 10 xây dựng một ứng dụng theo dõi dành cho công ty
 - Cho phép chủ động bật tắt đèn trên ứng dụng điện thoại
 - Thông báo khi có người lạ vào.
 - Thông báo nếu có nhân viên cty không mang khẩu trang.
+- Tính năng nâng cao: lưu cấu hình MQTT server vào SharedPreferences để tăng tính bảo mật và tăng tính đóng gói của chương trình.
 
 ## Ứng dụng trên YoloBit:
 - Theo dõi nhiệt độ và độ ẩm phòng, gửi thông tin lên server sau mỗi 5s
