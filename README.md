@@ -48,11 +48,14 @@ Mục tiêu nhóm 10 xây dựng một ứng dụng theo dõi dành cho công ty
 ## Ứng dụng trên YoloBit:
 - Theo dõi nhiệt độ và độ ẩm phòng, gửi thông tin lên server sau mỗi 5s
 - Tự động bật quạt khi phát hiện nhiệt độ quá cao (sử dụng Action trên Adafruit.io
-- Tự động bật đèn khi trời tối: cảm biến ánh sáng phát hiện trời tối: tự động bật đèn (dùng cảm biến ánh sáng)
+- Tự động bật đèn khi trời tối: cảm biến ánh sáng phát hiện trời tối thì tự động bật đèn (dùng cảm biến ánh sáng).
+- Tự động phát hiện có người, sử dụng cảm biến PIR. Khi phát hiện có người: xuất tín hiệu ra Serial. Trên Gateway (ứng dụng Python), dựa vào đọc tín hiệu từ Serial sẽ thực hiện thao tác kiểm tra gương mặt (Face Detection).
+  ![image](https://user-images.githubusercontent.com/90981819/234173865-6cb3cc95-aa8a-426a-b6b6-e88e7fd7d76c.png)
+
 
 ## Ứng dụng theo dõi có sử dụng AI: hiện tại nhóm phát triển ứng ụng trên laptop bằng Python.
-- Tự động theo dõi một khu vực định trước bằng camera tích hợp.
-- Tự động nhận diện gương mặt bằng AI.
+- Tự động theo dõi một khu vực định trước bằng cảm biến PIR, khi phát hiện có người sẽ bật camera tích hợp.
+- Tự động nhận diện gương mặt bằng AI khi phát hiện gương mặt trong khung hình camera..
 
   <img width="600" alt="Screenshot 2023-04-25 at 04 56 40" src="https://user-images.githubusercontent.com/90981819/234126096-748c13b2-99cc-46ab-904a-eb829914d67a.png">
   <img width="600" alt="Screenshot at Apr 25 04-57-21" src="https://user-images.githubusercontent.com/90981819/234126163-b6685b2f-087c-424a-b0c3-9ac6f93c96d5.png">
